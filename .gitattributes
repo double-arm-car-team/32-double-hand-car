@@ -1,0 +1,14 @@
+# Keep engineering assets out of text conversion and whitespace checks.
+*.pdf binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.SLDASM binary
+*.SLDPRT binary
+*.sldasm binary
+*.sldprt binary
+*.STL binary
+*.stl binary
+*.3mf binary
+*.stp binary
