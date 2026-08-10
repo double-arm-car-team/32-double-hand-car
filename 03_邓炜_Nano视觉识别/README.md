@@ -1,16 +1,16 @@
-# 03｜Nano 视觉识别
+# 03｜邓炜｜Nano 视觉识别
 
 **负责人：邓炜（邓处）**；**帧率优化联调：haimichenha**
 
-本模块保存 Nano 视觉识别的代码入口和阶段截图。检测工程位于仓库根目录 `yolov5/`；其中 YOLOv5 上游基础代码、许可证和第三方文件必须保留其原有来源说明，团队提交应明确区分自研配置、模型、脚本和上游文件。
+本模块保存 Nano 视觉识别的代码入口和阶段截图。检测工程位于本模块的 `yolov5/`；其中 YOLOv5 上游基础代码、许可证和第三方文件必须保留其原有来源说明，团队提交应明确区分自研配置、模型、脚本和上游文件。
 
 ## 代码入口
 
 | 位置 | 用途 |
 | --- | --- |
-| [yolov5/nano_uart_link_test.py](../../yolov5/nano_uart_link_test.py) | Nano/Jetson 与 STM32 的 UART5 PING、ECHO、VISION 联调脚本。 |
-| [yolov5/detect_fast.py](../../yolov5/detect_fast.py) | 本地检测流程入口之一。 |
-| [yolov5/my.yaml](../../yolov5/my.yaml) | 本地数据/类别配置。 |
+| [yolov5/nano_uart_link_test.py](yolov5/nano_uart_link_test.py) | Nano/Jetson 与 STM32 的 UART5 PING、ECHO、VISION 联调脚本。 |
+| [yolov5/detect_fast.py](yolov5/detect_fast.py) | 本地检测流程入口之一。 |
+| [yolov5/my.yaml](yolov5/my.yaml) | 本地数据/类别配置。 |
 
 ## 阶段性视觉证据
 
