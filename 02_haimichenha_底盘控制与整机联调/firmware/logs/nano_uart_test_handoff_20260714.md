@@ -1,5 +1,20 @@
 # Jetson Nano UART5 Test Handoff
 
+<details open>
+<summary><strong>阅读导航</strong> · 先看安全边界与通过门槛，再展开历史配置</summary>
+
+- [测试范围与安全](#nano-scope)
+- [历史准备状态](#nano-preparation)
+- [接线选择](#nano-wiring)
+- [构建、运行与协议](#nano-run)
+- [通过门槛、分阶段顺序与停止条件](#nano-gates)
+
+**快速使用：** 本文是 2026-07-14 的 UART5 交接快照。复现实验时先保持电机/舵机断电，
+按末尾 W0 → W4 门槛推进；历史环境、命令和诊断字段按需展开，不要把旧的准备状态当成
+当前 Nano 的实时状态。
+</details>
+
+<a id="nano-scope"></a>
 ## Scope and safety
 
 - Test layer: UART transport, text protocol, and diagnostic logging only.
@@ -12,7 +27,9 @@
 - Use 3.3 V TTL only. Connect grounds. Do not connect either board's 5 V supply pin.
 - Keep motor-driver and servo power disconnected during the first transport-only test.
 
-## Preparation status checked on 2026-07-14
+<a id="nano-preparation"></a>
+<details>
+<summary><strong>Historical preparation status · 2026-07-14</strong> · 展开构建与 Nano 环境快照</summary>
 
 - STM32 Debug and Release builds both complete without compiler warnings.
 - Debug HEX SHA256: `96E71B7EB08AAB32987E2D2CA5ABD666DFBDE8E1CD7487553FEB678384DEEBB4`.
@@ -24,7 +41,13 @@
 - Final SSH rechecks timed out, so the script is prepared locally but not yet
   confirmed or copied at `/home/nano/yolov5/nano_uart_link_test.py`.
 
-## Recommended physical path: USB-TTL plugged into Nano
+</details>
+
+<a id="nano-wiring"></a>
+<details>
+<summary><strong>接线选择</strong> · 展开 USB-TTL、Nano J41 与 PC 诊断三种接线</summary>
+
+### Recommended physical path: USB-TTL plugged into Nano
 
 This path does not require changing Nano services.
 
@@ -38,7 +61,7 @@ USB-TTL USB            -> Jetson Nano USB port
 After insertion, use the stable `/dev/serial/by-id/...` name. Do not permanently
 store `/dev/ttyUSB0`, because the number may change after replugging.
 
-## Alternate path: Nano J41 direct UART
+### Alternate path: Nano J41 direct UART
 
 ```text
 Nano J41 pin 8  TX -> STM32 PD2 / UART5 RX
@@ -50,7 +73,7 @@ Current inspection found `/dev/ttyTHS1` occupied by `nvgetty`. Do not use this
 path until `nvgetty` has been deliberately stopped/disabled for the test.
 `/dev/ttyS0` is a kernel console and must not be used.
 
-## PC diagnostic USB-TTL wiring
+### PC diagnostic USB-TTL wiring
 
 ```text
 STM32 PB6 / USART1 TX -> PC USB-TTL RX
@@ -61,7 +84,13 @@ STM32 GND              <-> PC USB-TTL GND
 In adapter-centric wording, the adapter TX wire goes to PB7 and the adapter RX
 wire goes to PB6.
 
-## Build and flash
+</details>
+
+<a id="nano-run"></a>
+<details>
+<summary><strong>构建、运行与协议</strong> · 展开烧录命令、Nano 脚本、诊断采集和文本协议</summary>
+
+### Build and flash
 
 Prepared outputs:
 
@@ -105,7 +134,7 @@ It also receives an independent one-second marker, even if Nano TX is broken:
 HEARTBEAT,<uptime_ms>,rx_bytes=<count>,motors_safe=1
 ```
 
-## Nano preparation and run
+### Nano preparation and run
 
 The prepared Python 3.6-compatible script is:
 
@@ -141,7 +170,7 @@ python3 nano_uart_link_test.py \
   --log nano_uart_vision30_20260714.csv
 ```
 
-## PC diagnostic capture
+### PC diagnostic capture
 
 List COM ports if the port is unknown:
 
@@ -161,7 +190,7 @@ Freeze and export the 128-event RAM ring after a test:
 .\scripts\capture_nano_uart_diag.ps1 -PortName COM16 -Seconds 20 -Command E
 ```
 
-## Protocol
+### Protocol
 
 ```text
 Nano -> STM32: PING,<seq>\n
@@ -177,7 +206,7 @@ Nano -> STM32: STATUS\n
 STM32 -> Nano: STATUS,<uptime_ms>,rx_bytes=...,rx_lines=...,parse_err=...,motors_safe=1\r\n
 ```
 
-## Diagnostic log fields
+### Diagnostic log fields
 
 ```text
 BOOT,...
@@ -195,6 +224,9 @@ or `C` to clear and resume the event ring.
 Per-byte logging exists behind `NANO_UART_TRACE_BYTES=1`, but remains disabled by
 default because blocking byte logs can disturb high-rate UART reception.
 
+</details>
+
+<a id="nano-gates"></a>
 ## Pass gates
 
 1. `STM32_READY` is received after reset.
