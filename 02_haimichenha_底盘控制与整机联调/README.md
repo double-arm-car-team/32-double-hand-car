@@ -43,7 +43,7 @@ cmake --build --preset BluetoothCarArmDebug
 不能替代编码器闭环、速度精度或整车路径性能结论。
 
 整车、底盘和机械臂的三维结构由赵正杰使用 **SolidWorks** 建模；可编辑的
-装配/零件源与 CAD 视图位于[机械建模与装配模块](../01_赵正杰_机械建模与装配/README.md)。
+装配/零件源与 SolidWorks 装配视图位于[机械建模与装配模块](../01_赵正杰_机械建模与装配/README.md)。
 `SLDASM`、`SLDPRT` 是建模源文件，`STL`、`3mf` 仅是制造导出物。
 
 ![四电机架空测试状态](evidence/小车四电机测试第一.jpeg)
