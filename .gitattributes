@@ -11,6 +11,3 @@
 *.STL binary
 *.stl binary
 *.3mf binary
-# Preserve the original TensorRT tool output byte-for-byte; its trailing spaces
-# are emitted by the tool and are not Markdown/code whitespace.
-03_邓炜_Nano视觉识别/evidence/haimichenha_ssh_optimization_20260713/trtexec_best_320_fp16_nano.log whitespace=-trailing-space
