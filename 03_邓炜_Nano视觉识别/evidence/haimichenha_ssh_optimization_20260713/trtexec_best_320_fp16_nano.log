@@ -1,0 +1,276 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=best_320.onnx --saveEngine=best_320_fp16_nano.engine --fp16 --workspace=1024 --buildOnly
+[07/13/2026-21:02:45] [I] === Model Options ===
+[07/13/2026-21:02:45] [I] Format: ONNX
+[07/13/2026-21:02:45] [I] Model: best_320.onnx
+[07/13/2026-21:02:45] [I] Output:
+[07/13/2026-21:02:45] [I] === Build Options ===
+[07/13/2026-21:02:45] [I] Max batch: explicit batch
+[07/13/2026-21:02:45] [I] Workspace: 1024 MiB
+[07/13/2026-21:02:45] [I] minTiming: 1
+[07/13/2026-21:02:45] [I] avgTiming: 8
+[07/13/2026-21:02:45] [I] Precision: FP32+FP16
+[07/13/2026-21:02:45] [I] Calibration: 
+[07/13/2026-21:02:45] [I] Refit: Disabled
+[07/13/2026-21:02:45] [I] Sparsity: Disabled
+[07/13/2026-21:02:45] [I] Safe mode: Disabled
+[07/13/2026-21:02:45] [I] DirectIO mode: Disabled
+[07/13/2026-21:02:45] [I] Restricted mode: Disabled
+[07/13/2026-21:02:45] [I] Save engine: best_320_fp16_nano.engine
+[07/13/2026-21:02:45] [I] Load engine: 
+[07/13/2026-21:02:45] [I] Profiling verbosity: 0
+[07/13/2026-21:02:45] [I] Tactic sources: Using default tactic sources
+[07/13/2026-21:02:45] [I] timingCacheMode: local
+[07/13/2026-21:02:45] [I] timingCacheFile: 
+[07/13/2026-21:02:45] [I] Input(s)s format: fp32:CHW
+[07/13/2026-21:02:45] [I] Output(s)s format: fp32:CHW
+[07/13/2026-21:02:45] [I] Input build shapes: model
+[07/13/2026-21:02:45] [I] Input calibration shapes: model
+[07/13/2026-21:02:45] [I] === System Options ===
+[07/13/2026-21:02:45] [I] Device: 0
+[07/13/2026-21:02:45] [I] DLACore: 
+[07/13/2026-21:02:45] [I] Plugins:
+[07/13/2026-21:02:45] [I] === Inference Options ===
+[07/13/2026-21:02:45] [I] Batch: Explicit
+[07/13/2026-21:02:45] [I] Input inference shapes: model
+[07/13/2026-21:02:45] [I] Iterations: 10
+[07/13/2026-21:02:45] [I] Duration: 3s (+ 200ms warm up)
+[07/13/2026-21:02:45] [I] Sleep time: 0ms
+[07/13/2026-21:02:45] [I] Idle time: 0ms
+[07/13/2026-21:02:45] [I] Streams: 1
+[07/13/2026-21:02:45] [I] ExposeDMA: Disabled
+[07/13/2026-21:02:45] [I] Data transfers: Enabled
+[07/13/2026-21:02:45] [I] Spin-wait: Disabled
+[07/13/2026-21:02:45] [I] Multithreading: Disabled
+[07/13/2026-21:02:45] [I] CUDA Graph: Disabled
+[07/13/2026-21:02:45] [I] Separate profiling: Disabled
+[07/13/2026-21:02:45] [I] Time Deserialize: Disabled
+[07/13/2026-21:02:45] [I] Time Refit: Disabled
+[07/13/2026-21:02:45] [I] Skip inference: Enabled
+[07/13/2026-21:02:45] [I] Inputs:
+[07/13/2026-21:02:45] [I] === Reporting Options ===
+[07/13/2026-21:02:45] [I] Verbose: Disabled
+[07/13/2026-21:02:45] [I] Averages: 10 inferences
+[07/13/2026-21:02:45] [I] Percentile: 99
+[07/13/2026-21:02:45] [I] Dump refittable layers:Disabled
+[07/13/2026-21:02:45] [I] Dump output: Disabled
+[07/13/2026-21:02:45] [I] Profile: Disabled
+[07/13/2026-21:02:45] [I] Export timing to JSON file: 
+[07/13/2026-21:02:45] [I] Export output to JSON file: 
+[07/13/2026-21:02:45] [I] Export profile to JSON file: 
+[07/13/2026-21:02:45] [I] 
+[07/13/2026-21:02:45] [I] === Device Information ===
+[07/13/2026-21:02:45] [I] Selected Device: NVIDIA Tegra X1
+[07/13/2026-21:02:45] [I] Compute Capability: 5.3
+[07/13/2026-21:02:45] [I] SMs: 1
+[07/13/2026-21:02:45] [I] Compute Clock Rate: 0.9216 GHz
+[07/13/2026-21:02:45] [I] Device Global Memory: 3956 MiB
+[07/13/2026-21:02:45] [I] Shared Memory per SM: 64 KiB
+[07/13/2026-21:02:45] [I] Memory Bus Width: 64 bits (ECC disabled)
+[07/13/2026-21:02:45] [I] Memory Clock Rate: 0.01275 GHz
+[07/13/2026-21:02:45] [I] 
+[07/13/2026-21:02:45] [I] TensorRT version: 8.2.1
+[07/13/2026-21:02:47] [I] [TRT] [MemUsageChange] Init CUDA: CPU +229, GPU +0, now: CPU 248, GPU 3297 (MiB)
+[07/13/2026-21:02:47] [I] [TRT] [MemUsageSnapshot] Begin constructing builder kernel library: CPU 248 MiB, GPU 3326 MiB
+[07/13/2026-21:02:47] [I] [TRT] [MemUsageSnapshot] End constructing builder kernel library: CPU 278 MiB, GPU 3356 MiB
+[07/13/2026-21:02:47] [I] Start parsing network model
+[07/13/2026-21:02:47] [I] [TRT] ----------------------------------------------------------------
+[07/13/2026-21:02:47] [I] [TRT] Input filename:   best_320.onnx
+[07/13/2026-21:02:47] [I] [TRT] ONNX IR version:  0.0.7
+[07/13/2026-21:02:47] [I] [TRT] Opset version:    12
+[07/13/2026-21:02:47] [I] [TRT] Producer name:    pytorch
+[07/13/2026-21:02:47] [I] [TRT] Producer version: 1.10
+[07/13/2026-21:02:47] [I] [TRT] Domain:           
+[07/13/2026-21:02:47] [I] [TRT] Model version:    0
+[07/13/2026-21:02:47] [I] [TRT] Doc string:       
+[07/13/2026-21:02:47] [I] [TRT] ----------------------------------------------------------------
+[07/13/2026-21:02:47] [W] [TRT] onnx2trt_utils.cpp:366: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+[07/13/2026-21:02:48] [W] [TRT] onnx2trt_utils.cpp:392: One or more weights outside the range of INT32 was clamped
+[07/13/2026-21:02:48] [W] [TRT] onnx2trt_utils.cpp:392: One or more weights outside the range of INT32 was clamped
+[07/13/2026-21:02:48] [W] [TRT] onnx2trt_utils.cpp:392: One or more weights outside the range of INT32 was clamped
+[07/13/2026-21:02:48] [I] Finish parsing network model
+[07/13/2026-21:02:48] [I] [TRT] ---------- Layers Running on DLA ----------
+[07/13/2026-21:02:48] [I] [TRT] ---------- Layers Running on GPU ----------
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_0
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_1), Mul_2)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_3
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_4), Mul_5)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_6 || Conv_16
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_7), Mul_8)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_9
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_10), Mul_11)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_12
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_13), Mul_14), Add_15)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_17), Mul_18)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_20
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_21), Mul_22)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_23
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_24), Mul_25)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_26 || Conv_43
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_27), Mul_28)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_29
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_30), Mul_31)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_32
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_33), Mul_34), Add_35)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_36
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_37), Mul_38)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_39
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_40), Mul_41), Add_42)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_44), Mul_45)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_47
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_48), Mul_49)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_50
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_51), Mul_52)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_53 || Conv_77
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_54), Mul_55)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_56
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_57), Mul_58)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_59
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_60), Mul_61), Add_62)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_63
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_64), Mul_65)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_66
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_67), Mul_68), Add_69)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_70
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_71), Mul_72)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_73
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_74), Mul_75), Add_76)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_78), Mul_79)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_81
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_82), Mul_83)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_84
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_85), Mul_86)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_87 || Conv_97
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_88), Mul_89)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_90
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_91), Mul_92)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_93
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(Sigmoid_94), Mul_95), Add_96)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_98), Mul_99)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_101
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_102), Mul_103)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_104
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_105), Mul_106)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] MaxPool_107
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] MaxPool_108
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] MaxPool_109
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 228 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 229 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 230 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 231 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_111
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_112), Mul_113)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_114
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_115), Mul_116)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Resize_118
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 243 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_120 || Conv_129
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_121), Mul_122)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_123
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_124), Mul_125)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_126
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_127), Mul_128)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_130), Mul_131)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_133
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_134), Mul_135)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_136
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_137), Mul_138)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Resize_140
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 268 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_142 || Conv_151
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_143), Mul_144)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_145
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_146), Mul_147)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_148
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_149), Mul_150)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_152), Mul_153)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_155
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_156), Mul_157)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_158
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_159), Mul_160)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 263 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_162 || Conv_171
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_163), Mul_164)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_165
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_166), Mul_167)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_168
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_169), Mul_170)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_172), Mul_173)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_175
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_176), Mul_177)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_178
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_179), Mul_180)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 238 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_182 || Conv_191
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_183), Mul_184)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_185
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_186), Mul_187)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_188
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_189), Mul_190)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_192), Mul_193)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_195
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(Sigmoid_196), Mul_197)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_198
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_199 + Transpose_200
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(Sigmoid_201)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_206
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 350
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(348 + (Unnamed Layer* 205) [Shuffle], PWN(346 + (Unnamed Layer* 202) [Shuffle] + Mul_208, Sub_210)), Add_212), 352 + (Unnamed Layer* 210) [Shuffle] + Mul_214)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_219
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 363
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(361 + (Unnamed Layer* 217) [Shuffle], PWN(359 + (Unnamed Layer* 214) [Shuffle] + Mul_221, Pow_223)), Mul_225)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_230
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 353 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 364 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 369 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_232
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_233
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_234 + Transpose_235
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(Sigmoid_236)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_241
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 402
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(400 + (Unnamed Layer* 233) [Shuffle], PWN(398 + (Unnamed Layer* 230) [Shuffle] + Mul_243, Sub_245)), Add_247), 404 + (Unnamed Layer* 238) [Shuffle] + Mul_249)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_254
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 415
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(413 + (Unnamed Layer* 245) [Shuffle], PWN(411 + (Unnamed Layer* 242) [Shuffle] + Mul_256, Pow_258)), Mul_260)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_265
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 405 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 416 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 421 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_267
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Conv_268
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_269 + Transpose_270
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(Sigmoid_271)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_276
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 454
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(PWN(452 + (Unnamed Layer* 261) [Shuffle], PWN(450 + (Unnamed Layer* 258) [Shuffle] + Mul_278, Sub_280)), Add_282), 456 + (Unnamed Layer* 266) [Shuffle] + Mul_284)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_289
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 467
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] PWN(PWN(465 + (Unnamed Layer* 273) [Shuffle], PWN(463 + (Unnamed Layer* 270) [Shuffle] + Mul_291, Pow_293)), Mul_295)
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Slice_300
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 457 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 468 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 473 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] Reshape_302
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 377 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 429 copy
+[07/13/2026-21:02:48] [I] [TRT] [GpuLayer] 481 copy
+[07/13/2026-21:02:49] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +158, GPU +146, now: CPU 445, GPU 3525 (MiB)
+[07/13/2026-21:02:50] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +241, GPU +244, now: CPU 686, GPU 3769 (MiB)
+[07/13/2026-21:02:50] [I] [TRT] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[07/13/2026-21:11:39] [I] [TRT] Detected 1 inputs and 7 output network tensors.
+[07/13/2026-21:11:39] [I] [TRT] Total Host Persistent Memory: 147808
+[07/13/2026-21:11:39] [I] [TRT] Total Device Persistent Memory: 3121152
+[07/13/2026-21:11:39] [I] [TRT] Total Scratch Memory: 0
+[07/13/2026-21:11:39] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 4 MiB, GPU 295 MiB
+[07/13/2026-21:11:40] [I] [TRT] [BlockAssignment] Algorithm ShiftNTopDown took 79.8642ms to assign 8 blocks to 137 nodes requiring 2227201 bytes.
+[07/13/2026-21:11:40] [I] [TRT] Total Activation Memory: 2227201
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +1, GPU +0, now: CPU 953, GPU 3870 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 953, GPU 3870 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +3, GPU +8, now: CPU 3, GPU 8 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] Init CUDA: CPU +0, GPU +0, now: CPU 940, GPU 3870 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] Loaded engine size: 5 MiB
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 947, GPU 3870 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +0, now: CPU 947, GPU 3870 (MiB)
+[07/13/2026-21:11:40] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +4, now: CPU 0, GPU 4 (MiB)
+[07/13/2026-21:11:40] [I] Engine built in 534.583 sec.
+&&&& PASSED TensorRT.trtexec [TensorRT v8201] # /usr/src/tensorrt/bin/trtexec --onnx=best_320.onnx --saveEngine=best_320_fp16_nano.engine --fp16 --workspace=1024 --buildOnly
